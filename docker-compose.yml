@@ -3,7 +3,7 @@ services:
     container_name: php-ingressos
     image: php:fpm-alpine
     volumes:
-      - ./src:/var/www/html
+      - ./public:/var/www/html
     networks:
       - internal
 
@@ -16,7 +16,7 @@ services:
     ports:
       - "8080:80"
     volumes:
-      - ./src:/var/www/html
+      - ./public:/var/www/html
     networks:
       - internal
 
