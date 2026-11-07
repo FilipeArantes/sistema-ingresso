@@ -1,7 +1,10 @@
 services: 
   php:
     container_name: php-ingressos
-    image: php:fpm-alpine
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: php:fpm
     volumes:
       - ./public:/var/www/html
     networks:
@@ -12,7 +15,7 @@ services:
     build:
       context: .
       dockerfile: .docker/nginx/Dockerfile
-    image: nginx:alpine
+    image: nginx:latest
     ports:
       - "8080:80"
     volumes:
