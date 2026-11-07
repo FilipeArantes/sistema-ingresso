@@ -1,0 +1,25 @@
+services: 
+  php:
+    container_name: php-ingressos
+    image: php:fpm-alpine
+    volumes:
+      - ./src:/var/www/html
+    networks:
+      - internal
+
+  nginx:
+    container_name: nginx-ingressos
+    build:
+      context: .
+      dockerfile: .docker/nginx/Dockerfile
+    image: nginx:alpine
+    ports:
+      - "8080:80"
+    volumes:
+      - ./src:/var/www/html
+    networks:
+      - internal
+
+networks:
+  internal:
+    driver: bridge
