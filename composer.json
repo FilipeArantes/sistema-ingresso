@@ -1,0 +1,15 @@
+{
+    "name": "filipe/sistema-ingresso",
+    "autoload": {
+        "psr-4": {
+            "Ingressos\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Filipe Arantes",
+            "email": "filipe.arantes@ipeweb.com.br"
+        }
+    ],
+    "require": {}
+}
