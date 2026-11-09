@@ -13,8 +13,8 @@ RUN docker-php-ext-install opcache
 RUN docker-php-ext-install pgsql
 RUN docker-php-ext-install pdo_pgsql
 RUN docker-php-ext-install intl
-RUN docker-php-ext-configure gd --with-jpeg --with-freetype
 RUN docker-php-ext-install gd
+RUN docker-php-ext-configure gd --with-jpeg --with-freetype
 RUN docker-php-ext-install zip
 
 RUN pecl install -o -f redis xdebug \
