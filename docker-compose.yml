@@ -1,0 +1,28 @@
+services: 
+  php:
+    container_name: php-ingressos
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: php:fpm
+    volumes:
+      - ./public:/var/www/html
+    networks:
+      - internal
+
+  nginx:
+    container_name: nginx-ingressos
+    build:
+      context: .
+      dockerfile: .docker/nginx/Dockerfile
+    image: nginx:latest
+    ports:
+      - "8080:80"
+    volumes:
+      - ./public:/var/www/html
+    networks:
+      - internal
+
+networks:
+  internal:
+    driver: bridge
