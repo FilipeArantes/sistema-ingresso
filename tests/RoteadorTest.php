@@ -7,9 +7,9 @@ use PHPUnit\Framework\TestCase;
 
 class RoteadorTest extends TestCase
 {
-    public function test_rota_root()
+    public function test_rota_saude()
     {
-        $dadosRetornados = Roteador::index();
+        $dadosRetornados = Roteador::saude();
 
         $this->assertArrayHasKey('status', $dadosRetornados);
         $this->assertArrayHasKey('data', $dadosRetornados);

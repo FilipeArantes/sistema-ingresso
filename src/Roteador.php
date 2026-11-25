@@ -4,7 +4,7 @@ namespace Ingressos;
 
 class Roteador
 {
-    public static function index()
+    public static function saude()
     {
         return [
             'status' => 200,
