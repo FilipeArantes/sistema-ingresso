@@ -5,11 +5,18 @@
             "Ingressos\\": "src/"
         }
     },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
     "authors": [
         {
             "name": "Filipe Arantes",
             "email": "filipe.arantes@ipeweb.com.br"
         }
     ],
-    "require": {}
+    "require-dev": {
+        "phpunit/phpunit": "^12.5"
+    }
 }

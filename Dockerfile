@@ -29,4 +29,7 @@ RUN echo "xdebug.mode=debug" >> /usr/local/etc/php/conf.d/docker-php-ext-xdebug.
 	&& echo "xdebug.client_port=9003" >> /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini \
 	&& echo "xdebug.var_display_max_children = 128" >> /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
 
+ARG VERSAO
+ENV VERSAO='dev'
+
 COPY --from=composer /usr/bin/composer /usr/bin/composer
