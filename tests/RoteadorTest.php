@@ -2,6 +2,7 @@
 
 namespace Tests;
 
+use Ingressos\Roteador;
 use PHPUnit\Framework\TestCase;
 
 class RoteadorTest extends TestCase
