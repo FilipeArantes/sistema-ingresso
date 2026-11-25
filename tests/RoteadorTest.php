@@ -19,4 +19,12 @@ class RoteadorTest extends TestCase
         $this->assertSame('ok', $dadosRetornados['data']['status']);
         $this->assertSame(getenv('VERSAO'), $dadosRetornados['data']['versao']);
     }
+
+    public function test_rota_index()
+    {
+        $dadosRetornados = Roteador::index();
+
+        $this->assertArrayHasKey('status', $dadosRetornados);
+        $this->assertSame(200, $dadosRetornados['status']);
+    }
 }
