@@ -6,7 +6,7 @@ services:
       dockerfile: Dockerfile
     image: php:fpm
     volumes:
-      - ./public:/var/www/html
+      - ./:/var/www/html
     networks:
       - internal
 
@@ -15,11 +15,11 @@ services:
     build:
       context: .
       dockerfile: .docker/nginx/Dockerfile
-    image: nginx:latest
+    image: ingressos-nginx
     ports:
-      - "8080:80"
+      - "8081:80"
     volumes:
-      - ./public:/var/www/html
+      - ./:/var/www/html
     networks:
       - internal
 
