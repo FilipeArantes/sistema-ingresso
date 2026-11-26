@@ -27,4 +27,12 @@ class RoteadorTest extends TestCase
         $this->assertArrayHasKey('status', $dadosRetornados);
         $this->assertSame(200, $dadosRetornados['status']);
     }
+
+    public function test_rota_not_found()
+    {
+        $dadosRetornados = Roteador::notFound();
+
+        $this->assertArrayHasKey('status', $dadosRetornados);
+        $this->assertSame(200, $dadosRetornados['status']);
+    }
 }
