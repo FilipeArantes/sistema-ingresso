@@ -26,4 +26,12 @@ class Roteador
             'status' => self::STATUS_OK
         ];
     }
+
+    public static function notFound()
+    {
+        http_response_code(self::STATUS_NOT_FOUND);
+        return [
+            'status' => self::STATUS_NOT_FOUND
+        ];
+    }
 }
