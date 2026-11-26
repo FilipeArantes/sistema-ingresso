@@ -14,4 +14,11 @@ class Roteador
             ]
         ];
     }
+
+    public static function index()
+    {
+        return [
+            'status' => 200
+        ];
+    }
 }
