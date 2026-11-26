@@ -23,7 +23,8 @@ class Roteador
     {
         http_response_code(self::STATUS_OK);
         return [
-            'status' => self::STATUS_OK
+            'status' => self::STATUS_OK,
+            'message' => 'Tudo ok'
         ];
     }
 
@@ -31,7 +32,8 @@ class Roteador
     {
         http_response_code(self::STATUS_NOT_FOUND);
         return [
-            'status' => self::STATUS_NOT_FOUND
+            'status' => self::STATUS_NOT_FOUND,
+            'message' => 'Pagina não existente'
         ];
     }
 }
