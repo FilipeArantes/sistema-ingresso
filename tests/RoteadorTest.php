@@ -13,7 +13,7 @@ class RoteadorTest extends TestCase
 
         $this->assertArrayHasKey('status', $dadosRetornados);
         $this->assertArrayHasKey('data', $dadosRetornados);
-        $this->assertSame(200, $dadosRetornados['status']);
+        $this->assertSame(Roteador::STATUS_OK, $dadosRetornados['status']);
         $this->assertArrayHasKey('status', $dadosRetornados['data']);
         $this->assertArrayHasKey('versao', $dadosRetornados['data']);
         $this->assertSame('ok', $dadosRetornados['data']['status']);
@@ -25,7 +25,7 @@ class RoteadorTest extends TestCase
         $dadosRetornados = Roteador::index();
 
         $this->assertArrayHasKey('status', $dadosRetornados);
-        $this->assertSame(200, $dadosRetornados['status']);
+        $this->assertSame(Roteador::STATUS_OK, $dadosRetornados['status']);
     }
 
     public function test_rota_not_found()
@@ -33,6 +33,6 @@ class RoteadorTest extends TestCase
         $dadosRetornados = Roteador::notFound();
 
         $this->assertArrayHasKey('status', $dadosRetornados);
-        $this->assertSame(200, $dadosRetornados['status']);
+        $this->assertSame(Roteador::STATUS_NOT_FOUND, $dadosRetornados['status']);
     }
 }
