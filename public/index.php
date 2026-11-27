@@ -7,12 +7,12 @@ header('Content-Type: application/json');
 
 use Ingressos\Roteador;
 
-$uri = $_SERVER['REQUEST_URI'];
+$url = $_SERVER['REQUEST_URI'];
 
-if ($uri == '/') {
+if ($url == '/') {
     return print json_encode(Roteador::index());
 }
-if ($uri == '/saude') {
+if ($url == '/saude') {
     return print json_encode(Roteador::saude());
 }
 
