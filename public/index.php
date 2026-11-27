@@ -3,6 +3,8 @@
 // print "asdasdasdas";
 require_once  __DIR__ . '/../vendor/autoload.php';
 
+header('Content-Type: application/json');
+
 use Ingressos\Roteador;
 
 $uri = $_SERVER['REQUEST_URI'];

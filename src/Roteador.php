@@ -5,7 +5,7 @@ namespace Ingressos;
 class Roteador
 {
     public const STATUS_OK = 200;
-    public const STATUS_NOT_FOUND = 400;
+    public const STATUS_NOT_FOUND = 404;
 
     public static function saude()
     {
